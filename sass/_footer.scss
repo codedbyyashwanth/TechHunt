@@ -1,0 +1,66 @@
+footer {
+    width: 100%;
+    margin-top: 20px;
+    padding: 50px 10px;
+    text-align: center;
+    background-color: $black-2;
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ion-icon {
+            margin: 20px;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 1.6rem;
+            background-color: $white;
+            cursor: pointer;
+            transition: ease 0.4s;
+            color: $black-2;
+
+            &:hover {
+                background-color: $blue-1;
+                color: $white;
+            }
+        }
+
+        ion-icon:nth-child(2) {
+            &:hover {
+                background-color: #E1306C;
+                color: $white;
+            }
+        }
+
+        ion-icon:nth-child(3) {
+            &:hover {
+                background-color:  #25D366 ;
+                color: $white;
+            }
+        }
+    }
+
+    .legal {
+        color: #fff;
+        margin-top: 10px;
+
+        a {
+            color: $white;
+            text-decoration: none;
+            margin: 5px 10px;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+    }
+
+    .rights {
+
+        span {
+            text-align: center;
+            color: rgb(153, 153, 153);
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+    }
+}

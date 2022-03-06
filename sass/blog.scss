@@ -1,0 +1,120 @@
+@import "variables";
+
+.blog-content-container {
+    width: 94%;
+    max-width: 1300px;
+    margin: 50px auto;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fill, 400px);
+    column-gap: 30px;
+    row-gap: 40px;
+
+    @media (max-width:400px) {
+        & {
+            justify-content: center;
+            grid-template-columns: repeat(auto-fill, 320px);
+        }
+    }
+
+    .blog-content-card {
+        width: 100%;
+        box-shadow: 0px 0px 30px rgb(233, 233, 233);
+
+        @media (max-width:400px) {
+            & {
+                margin: 20px 5px;
+            }
+        }
+        
+        .img-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .text-container {
+            width: 100%;
+            padding: 20px 20px 30px 20px;
+
+            h2 {
+                font-weight: 600;
+                font-size: 1.25rem;
+                margin-bottom: 10px;
+                letter-spacing: 0.5px;
+            }
+
+            p {
+                font-size: 0.8rem;
+                letter-spacing: 1px;
+            }
+
+            button {
+                margin: 30px 20px;
+                float: right;
+                clear: both;
+                width: 130px;
+                height: 45px;
+                border: none;
+                letter-spacing: 1px;
+                font-size: 14px;
+                outline:none;
+                color: #ffffff;
+                border-radius: 6px;
+                background-color: $blue-1;
+                border: 1px solid $blue-1;
+                font-family: 'inter', sans-serif;
+                cursor: pointer;
+                box-shadow: 0px 0px 20px rgba(0,0,0,0.1);
+    
+                &:hover {
+                    background-color: rgba($blue-1, 0.8);
+                }
+            }
+        }
+    }
+}
+
+
+.blog-content {
+    width: 94%;
+    max-width: 800px;
+    margin: 50px auto;
+
+    h1 {
+        font-weight: 800;
+        color: $black-2;
+        font-size: 2.4rem;
+        margin-bottom: 40px;
+        text-align: left;
+    }
+
+    .img-container {
+        margin: 0px auto;
+        width: 100%;    
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .desc {
+        margin-top: 50px;
+        color: $black-3;
+        font-size: 1.1rem;
+        letter-spacing: 0.8px;
+        word-spacing: 1.5px;
+        line-height: 1.6;
+
+        img {
+            width: 100%;
+            
+        }
+    }
+}

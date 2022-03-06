@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    width: 100%;
+    padding: 10px 0px;
+    box-shadow: 0px 0px 20px rgb(230, 230, 230);
+    position: relative;
+
+    .navbar {
+        width: 90%;
+        max-width: 1200px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 50px;
+        cursor: pointer;
+    }
+
+    .menu {
+        display: none;
+
+        ion-icon {
+            font-size: 2rem;
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+    }
+
+    nav {
+        display: block;
+
+        ul li {
+            display: inline-block;
+            margin: 5px 15px;
+            padding: 2px;
+
+            a {
+                font-size: 0.87rem;
+                text-decoration: none;
+                font-weight: 500;
+                color: $black-3;
+
+                &:hover {
+                    color: $blue-1;
+                    transition: ease 0.4s;
+                }
+            }
+
+            .active-page {
+                color: $blue-1;
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    header {
+
+        .menu {
+            display: block;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .nav {
+            display: block;
+            width: 94%;
+            margin: auto;
+            position: absolute;
+            top: 120%;
+            left: 10px;
+            z-index: 100;
+            right: 10px;
+            padding: 5px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgb(235, 235, 235);
+            background-color: #ffffff;
+            animation: movenav ease 1s;
+
+            ul li {
+                display: block;
+                margin: 15px 15px;
+            }
+        }
+
+        @keyframes movenav {
+            0% {
+                opacity: 0;
+                transform: translateY(-100px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    }
+}
