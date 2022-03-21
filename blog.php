@@ -18,16 +18,33 @@
 ?>
 
 <main>
+    <div class="op-blog">
+        <a href="./editor"><button>Create Post</button></a>
+        <form action="./blog" method="POST">
+            <button name="ViewPost" type="submit">View Post</button>
+        </form>
+    </div>
     <div class="blog-content-container">
         <?php 
             require_once('./database/database.php');
-            $query = "SELECT * FROM blog";
+
+            $edit = false;
+
+            if (isset($_POST['ViewPost'])) {
+                $id = $_SESSION['id'];
+                $edit = true;
+                $query = "SELECT * FROM blog WHERE user_id = '$id'";
+            } else {
+                $edit = false;
+                $query = "SELECT * FROM blog";
+            }
+
             $result = mysqli_query($connection, $query);
 
             if (mysqli_num_rows($result) > 0) {
                 while($row = mysqli_fetch_array($result)) {
                     echo '
-                    <div class="blog-content-card">
+                    <figure class="blog-content-card">
                     <div class="img-container">
                         <img src=" '.$row['img_url']. ' "  alt="">
                     </div>
@@ -39,7 +56,7 @@
                             <button type="submit">Read More</button>
                         </form>
                     </div>
-                </div>
+                </figure>
                     ';
                 }
             } else {

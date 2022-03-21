@@ -159,7 +159,7 @@
                     ';
 
             } else {
-                header("Location: signup?err=true");
+                header("Location: signup");
             }
         } else if (isset($_POST['editinfo'])) {
             $name = $_POST['name'];

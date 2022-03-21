@@ -27,6 +27,7 @@
             
             while ($row = mysqli_fetch_assoc($result)) {
                 $productURL  = $row['product_url'];
+                $vid  = $row['vender_ids'];
                 $productName  = $row['product_name'];
                 $productCost  = $row['product_cost'];
                 $productDesc  = $row['product_description'];
@@ -67,6 +68,7 @@
                     </div>
                     <input name="pid" hidden  value="'.$pid.'" />
                     <input name="uid" hidden  value="'.$uid.'" />
+                    <input name="vid" hidden  value="'.$vid.'" />
                     <button type="submit" name="addtocart">Add to Cart</button>
                  </form>
                 </div>

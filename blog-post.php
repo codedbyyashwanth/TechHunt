@@ -33,15 +33,34 @@
         
         $title = $data['title'];
         $url = $data['img_url'];
+        $userId = $data['user_id'];
         $description = $data['description'];
-    ?>
-    <div class="blog-content">
-        <h1><?php echo $title; ?></h1>
+
+        echo '<div class="blog-content">
+        <h1>'.$title.'</h1>
         <div class="img-container">
-            <img src="<?php echo $url; ?>" alt="">
+            <img src="'.$url.'" alt="">
         </div>
-        <div class="desc"><?php echo htmlspecialchars_decode($description); ?></div>
-    </div>
+        <div class="desc">';
+        echo htmlspecialchars_decode($description);
+        echo '</div>
+        </div>';
+
+        if ($userId == $_SESSION['id']) {
+            echo '<div class="edit">
+            <form action="./editor" method="POST">
+                <input hidden value="'.$id.'" name="bid" />
+                <button name="EditPost" type="submit">Edit Post</button>
+            </form>
+            <form action="./action" method="POST">
+                <input hidden value="'.$id.'" name="bid" />
+                <button name="DeletePost" type="submit">Delete Post</button>
+            </form>
+        </div>';
+        }
+
+    ?>
+    
 </main>
 
 

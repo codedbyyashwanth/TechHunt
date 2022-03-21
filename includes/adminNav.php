@@ -15,6 +15,7 @@
             <ul>
                 <li><a href="./index" <?php if($currentPage === "home") { echo "class='active-page'"; } ?>>Products</a></li>
                 <li><a href="./orders"  <?php if($currentPage === "orders") { echo "class='active-page'"; } ?>>Orders</a></li>
+                <li><a href="./action?logout=true">Logout</a></li>
             </ul>
         </nav>
     </div>

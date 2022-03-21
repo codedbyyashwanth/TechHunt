@@ -2,7 +2,7 @@
 .product-container {
   width: 98%;
   max-width: 1300px;
-  margin: 200px auto;
+  margin: 160px auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -43,7 +43,7 @@
 @media (max-width: 600px) {
   .product-container .product-image {
     max-width: 500px;
-    margin: auto 10px;
+    margin: 20px 10px;
   }
 }
 

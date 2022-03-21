@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    width: 100%;
+    padding: 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  @media (max-width: 400px) {
+    main {
+      padding: 25px 0;
+    }
+  }
+
+main .login-container {
+    padding: 30px 40px;
+    width: 100%;
+    margin: 150px 0;
+    max-width: 400px;
+    -webkit-box-shadow: 0px 0px 20px rgba(216, 216, 216, 0.8);
+            box-shadow: 0px 0px 20px rgba(216, 216, 216, 0.8);
+  }
+  
+  @media (max-width: 400px) {
+    main .login-container {
+      padding: 30px 20px;
+    }
+  }
+  
+  main .login-container * {
+    display: block;
+  }
+  
+  main .login-container h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 40px;
+    letter-spacing: 0.6px;
+    color: #3167eb;
+    text-align: center;
+  }
+  
+  main .login-container a {
+    text-align: center;
+    font-size: 0.7rem;
+    color: #323232;
+    margin-top: 10px;
+  }
+  
+  main .login-container input {
+    width: 100%;
+    max-width: 400px;
+    margin: 10px auto;
+    height: 45px;
+    outline: none;
+    border-radius: 4px;
+    padding: 5px 15px;
+    border: 1px solid rgba(167, 167, 167, 0.486);
+  }
+  
+  main .login-container input[type="submit"] {
+    margin-top: 30px;
+    color: #fff;
+    cursor: pointer;
+    background-color: #3167eb;
+  }
